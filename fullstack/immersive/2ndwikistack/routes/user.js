@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express();
-const Sequelize = require('sequelize');
+
 // ...
 // router.use('/wiki', () => require('wikiRouter'));
 // or, in one line: router.use('/wiki', require('./wiki'));

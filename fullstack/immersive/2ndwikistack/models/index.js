@@ -8,7 +8,7 @@ var Page = db.define('page', {
     },
     urlTitle: {
         type: Sequelize.STRING,
-        allowNull: false
+        //allowNull: false   ,,----may have to put this back in 
     },
     content: {
         type: Sequelize.TEXT,
@@ -17,10 +17,10 @@ var Page = db.define('page', {
     status: {
         type: Sequelize.ENUM('open', 'closed')
     },
-    date: {
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.NOW
-    }
+    // date: {
+    //     type: Sequelize.DATE,
+    //     defaultValue: Sequelize.NOW
+    // }
 });
 
 var User = db.define('user', {
@@ -32,7 +32,7 @@ var User = db.define('user', {
         type: Sequelize.STRING,
         allowNull: false,
         validate: {
-            isEmail: true
+            isEmail: true  ///this is inside the object bec sqlize is checking it.. The res is checked by db
         }
     }
 });

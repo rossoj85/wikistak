@@ -23,21 +23,26 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/', function(req, res, next) {
+    console.log('-------------------------------------------');
+    console.log(req.body)
+    console.log('-------------------------------------')
 
-  var page = Page.build({
+
+  var newPage = Page.build({
     title: req.body.title,
-    content: req.body.content
+    content: req.body.content,
+    status: req.body.status,                   //or just req.body
     // urlTitle: req.body.urlTitle,
     // status: req.body.status,
     // date: mew Date('Now')
-
+    
 });
 //   var user  = User.build({
 //     name: req.params.user,
 //     email: req.params.email
 //   })
-
-  page.save();
+    console.log(newPage)
+  newPage.save();
 
 });
 // router.post('/',function(req,res,next){
